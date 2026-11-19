@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fábio Lima — Engenharia de Dados. Projetos de integração, Data Warehouse, Airflow, dbt e Azure Data Factory.">
+  <meta name="theme-color" content="#102438">
+  <title>Fábio Lima · Engenharia de Dados</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#projects" data-i18n="skip">Ir aos projetos</a>
+  <header class="header wrap">
+    <a class="brand" href="#top" aria-label="Fábio Lima, início">Fábio Lima<span>DATA ENGINEERING</span></a>
+    <nav aria-label="Principal">
+      <a href="#projects" data-i18n="projects">Projetos</a>
+      <a href="#about" data-i18n="about">Sobre</a>
+      <a href="#contact" data-i18n="contact">Contato</a>
+      <div class="languages" aria-label="Idioma / Language"><button type="button" data-lang="pt" aria-pressed="true">PT</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
+    </nav>
+  </header>
+  <main id="top">
+    <section class="hero wrap">
+      <div>
+        <p class="eyebrow" data-i18n="role">ENGENHEIRO DE DADOS · GOIÂNIA, BRASIL</p>
+        <h1 data-i18n="headline">Da integração ao dado confiável.</h1>
+        <p class="intro" data-i18n="intro">Desenvolvo pipelines e Data Warehouses que conectam sistemas, organizam regras de negócio e entregam dados para análise.</p>
+        <a class="button" href="#projects" data-i18n="explore">Conheça os projetos</a>
+      </div>
+      <aside class="hero-aside">
+        <p data-i18n="approach">Engenharia de ponta a ponta</p>
+        <div class="flow-word" data-i18n="flow1">Ingestão</div><div class="flow-word" data-i18n="flow2">Transformação</div><div class="flow-word" data-i18n="flow3">Consumo</div>
+        <p class="aside-foot" data-i18n="foundation">Qualidade, observabilidade e governança em cada etapa.</p>
+      </aside>
+    </section>
+    <section id="projects" class="projects wrap">
+      <div class="section-head"><h2 data-i18n="selected">Projetos em detalhe</h2><p data-i18n="caseNote">Estudos de caso anonimizados a partir da minha experiência profissional.</p></div>
+      <article class="project airflow">
+        <div class="project-heading"><div><p class="eyebrow" data-i18n="airCategory">PLATAFORMA DE DADOS · ORQUESTRAÇÃO E ANALYTICS</p><h3 data-i18n="airTitle">Integrações, eventos e uma camada analítica centralizada.</h3></div><p class="project-lead" data-i18n="airLead">Uma arquitetura que reúne ERP, CRM, APIs, banco da aplicação e planilhas em um Data Warehouse, com transformação e qualidade de dados.</p></div>
+        <ul class="stack" aria-label="Tecnologias"><li>Python</li><li>Apache Airflow</li><li>dbt</li><li>MySQL</li><li>FastAPI</li><li>GitHub Actions</li><li>Microsoft Fabric</li></ul>
+        <figure><button class="diagram-button" type="button" data-diagram="airflow"><img id="airflow-image" src="AIRFLOW_PORTUGUES.gif" alt="Arquitetura de integração com Airflow, dbt, MySQL, FastAPI e Microsoft Fabric" width="2290" height="1140" fetchpriority="high"><span class="expand" data-i18n="enlarge">Ampliar arquitetura</span></button><figcaption data-i18n="airCaption">Da ingestão via API e webhook à camada Gold, com CI/CD e observabilidade.</figcaption></figure>
+        <div class="case-grid"><section><h4 data-i18n="challenge">O desafio</h4><p data-i18n="airChallenge">Consolidar dados de diferentes sistemas para sustentar indicadores compartilhados, com processos de carga rastreáveis e regras de negócio consistentes.</p></section><section><h4 data-i18n="contribution">Minha atuação</h4><p data-i18n="airContribution">Desenvolvimento de DAGs e integrações em Python, estruturação do DW em MySQL e transformações SQL. Evolução para dbt e webhooks, com revisão de código, testes e automação de entrega.</p></section><section><h4 data-i18n="delivery">A entrega</h4><p data-i18n="airDelivery">Camadas de staging, controle, fatos e dimensões, com dados disponíveis para Power BI e consumidores analíticos. Monitoramento de execução e alertas apoiam a sustentação dos pipelines.</p></section></div>
+        <details><summary data-i18n="decisions">Decisões técnicas e operação</summary><div class="detail-grid"><section><h4 data-i18n="airD1Title">Clientes de API reutilizáveis</h4><p data-i18n="airD1">Autenticação, paginação, timeout e retry concentrados por fonte. As DAGs reaproveitam essa lógica ao extrair cada entidade.</p></section><section><h4 data-i18n="airD2Title">Incremental com rastreabilidade</h4><p data-i18n="airD2">Configuração, watermark e logs de execução registram o avanço da carga. As transformações aplicam deduplicação, regras de negócio e histórico dimensional.</p></section><section><h4 data-i18n="airD3Title">Qualidade e entrega contínua</h4><p data-i18n="airD3">Testes de unicidade, campos obrigatórios e integridade referencial. GitHub Actions valida código e DAGs, apoiando deploy e rollback.</p></section><section><h4 data-i18n="airD4Title">Acesso e observabilidade</h4><p data-i18n="airD4">Credenciais em Airflow Connections e GitHub Secrets, acesso de leitura para consumo e alertas de falha com Issues no GitHub.</p></section></div></details>
+      </article>
+      <article class="project azure">
+        <div class="project-heading"><div><p class="eyebrow" data-i18n="azureCategory">MICROSOFT AZURE · DATA WAREHOUSE E BI</p><h3 data-i18n="azureTitle">Ingestão orientada por metadados, do ADF ao Power BI.</h3></div><p class="project-lead" data-i18n="azureLead">Pipelines parametrizadas integram APIs e organizam cargas por data, rota e página. Uma tabela de controle centraliza a configuração da ingestão.</p></div>
+        <ul class="stack" aria-label="Tecnologias"><li>Azure Data Factory</li><li>Azure SQL</li><li>T-SQL</li><li>Key Vault</li><li>Logic Apps</li><li>Azure DevOps</li><li>Power BI</li></ul>
+        <figure><button class="diagram-button" type="button" data-diagram="azure"><img id="azure-image" src="AZURE_PORTUGUES.gif" alt="Arquitetura Azure com Data Factory, SQL, curadoria, Data Warehouse e Power BI" width="2714" height="960" loading="lazy"><span class="expand" data-i18n="enlarge">Ampliar arquitetura</span></button><figcaption data-i18n="azureCaption">Serviços vinculados, datasets, pipelines, curadoria em SQL e entrega analítica.</figcaption></figure>
+        <div class="case-grid"><section><h4 data-i18n="challenge">O desafio</h4><p data-i18n="azureChallenge">Consumir diferentes rotas de APIs, coordenando paginação e janelas de datas, e disponibilizar dados tratados para análise com controle de custos de infraestrutura.</p></section><section><h4 data-i18n="contribution">Minha atuação</h4><p data-i18n="azureContribution">Desenvolvimento de pipelines ADF e transformações em stored procedures, parametrização por tabela de controle e tratamento de falhas. Versionamento no Azure DevOps e integração com Key Vault e Logic Apps.</p></section><section><h4 data-i18n="delivery">A entrega</h4><p data-i18n="azureDelivery">Cargas incrementais de APIs para staging e processamento até as tabelas analíticas. Dataflows e a camada semântica disponibilizam os dados para relatórios em Power BI.</p></section></div>
+        <details><summary data-i18n="decisions">Decisões técnicas e operação</summary><div class="detail-grid"><section><h4 data-i18n="azureD1Title">Controle centralizado</h4><p data-i18n="azureD1">Endpoints, filtros, limites de paginação e LAST_LOAD na tabela de controle. Pipelines encadeadas percorrem datas, rotas de transporte e páginas de cada API.</p></section><section><h4 data-i18n="azureD2Title">Reprocessamento de sete dias</h4><p data-i18n="azureD2">A janela parte de LAST_LOAD menos sete dias para recuperar alterações recentes. Procedures tratam registros e aplicam as regras antes da carga analítica.</p></section><section><h4 data-i18n="azureD3Title">SQL serverless e alertas</h4><p data-i18n="azureD3">Azure SQL de 0,5 a 2 vCores, com pausa após uma hora de inatividade. A pipeline retoma o banco antes da carga. Falhas registradas acionam e-mails via Logic Apps.</p></section><section><h4 data-i18n="azureD4Title">Modelo de referência e expansão</h4><p data-i18n="azureD4">O diagrama apresenta SAP local com runtime auto-hospedado, planilhas e agentes de IA como possibilidades de expansão. Schemas FATO/DIMENSÃO e data marts departamentais ilustram a organização analítica.</p></section></div></details>
+      </article>
+    </section>
+    <section id="about" class="about wrap"><h2 data-i18n="aboutTitle">Engenharia conectada ao negócio.</h2><div><p data-i18n="bio">Sou Fábio Lima, engenheiro de dados com experiência em integração de sistemas, pipelines ETL/ELT, modelagem dimensional e Business Intelligence. Minha trajetória inclui consultoria para múltiplos clientes e projetos em indústria e logística.</p><p data-i18n="bio2">Trabalho com SQL, Python, Apache Airflow, Azure Data Factory, SSIS e Power BI, conectando a ingestão às necessidades de quem usa os dados.</p><p class="context" data-i18n="context">As arquiteturas foram adaptadas para apresentação pública, com nomes e ambientes anonimizados. Os exemplos de expansão estão identificados nos estudos de caso.</p></div></section>
+    <section id="contact" class="contact wrap"><div><p class="eyebrow" data-i18n="conversation">VAMOS CONVERSAR</p><h2 data-i18n="contactTitle">Seu próximo projeto precisa de dados confiáveis?</h2></div><div class="contact-links"><a class="button" href="https://www.linkedin.com/in/fabioliima/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:fabioliima@live.com">fabioliima@live.com</a><a href="https://github.com/fabioliima" target="_blank" rel="noopener noreferrer">GitHub</a></div></section>
+  </main>
+  <footer class="wrap"><span>Fábio Lima · Data Engineering</span><a href="#top" data-i18n="back">Voltar ao início</a></footer>
+  <dialog id="viewer" aria-labelledby="viewer-title"><div class="viewer-bar"><h2 id="viewer-title" data-i18n="architecture">Arquitetura do projeto</h2><a id="original" href="AIRFLOW_PORTUGUES.gif" target="_blank" rel="noopener noreferrer" data-i18n="original">Abrir original</a><button id="close-viewer" type="button" data-i18n="close">Fechar</button></div><p class="viewer-help" data-i18n="zoomHelp">Role para explorar a arquitetura no tamanho original.</p><div class="viewer-canvas"><img id="viewer-image" alt=""></div></dialog>
+</body>
+</html>
